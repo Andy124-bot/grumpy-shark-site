@@ -31,20 +31,20 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         // Format mailto link
-       const mailtoLink = `mailto:grumpsharkwebsite@gmail.com` +
-        `?subject=Contact%20Grumpy%20Shark` +
-        `&body=Name:%20${encodeURIComponent(name)}%0A` +
-        `Email:%20${encodeURIComponent(email)}%0A` +
-        `Message:%20${encodeURIComponent(message)}`;
+        const mailtoLink = `mailto:grumpsharkwebsite@gmail.com` +
+            `?subject=Contact%20Grumpy%20Shark` +
+            `&body=Name:%20${encodeURIComponent(name)}%0A` +
+            `Email:%20${encodeURIComponent(email)}%0A` +
+            `Message:%20${encodeURIComponent(message)}`;
 
-    // Open user's email client
-    window.location.href = mailtoLink;
+        // Open user's email client
+        window.location.href = mailtoLink;
 
-    // Show a helpful message (not "sent" confirmation)
-    confirmationMessage.textContent = "📬 Your email app should now be open—click Send to complete your message.";
-    confirmationMessage.classList.remove("hidden");
+        // Show a helpful message (not "sent" confirmation)
+        confirmationMessage.textContent = "📬 Your email app should now be open—click Send to complete your message.";
+        confirmationMessage.classList.remove("hidden");
 
-    setTimeout(() => confirmationMessage.classList.add("hidden"), 6000);
+        setTimeout(() => confirmationMessage.classList.add("hidden"), 6000);
 
 
     });
@@ -99,4 +99,17 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     animateFloatingElements();
+    function speakText(text) {
+        const utterance = new SpeechSynthesisUtterance(text);
+        utterance.lang = 'en-AU';
+        speechSynthesis.speak(utterance);
+    }
+
+    // Basic auto-narration on page load for <main><h1>
+    window.addEventListener('DOMContentLoaded', () => {
+        const title = document.querySelector('main h1');
+        if (title) {
+            speakText(title.textContent);
+        }
+    });
 });
