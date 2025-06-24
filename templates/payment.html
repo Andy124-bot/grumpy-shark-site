@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Payment</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <style>
+        .image-wrapper {
+            position: relative;
+            display: inline-block;
+        }
+
+        .click-overlay {
+            position: absolute;
+            bottom: 6px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0, 0, 0, 0.6);
+            color: #fff;
+            padding: 2px 8px;
+            font-size: 0.8em;
+            border-radius: 4px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .image-wrapper:hover .click-overlay {
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="payment-container">
+        <h1>Grumpy Shark - Buy a Book!</h1>
+        <p>Choose your adventure and purchase below:</p>
+
+        <div class="book-list">
+
+            <div class="book-card">
+                <div class="image-wrapper">
+                    <a href="{{ url_for('book_1_preview') }}" target="_blank">
+                        <img src="{{ url_for('static', filename='books/grumpy_1_cover.png') }}"
+                            alt="Grumpy Shark's First Adventure">
+                        <div class="click-overlay">📖 Click to view sample</div>
+                    </a>
+                </div>
+                <h2>Grumpy Shark's First Adventure</h2>
+                <div class="book-popup">
+                    Grumpy's first splash into the deep sea, making unlikely friendships and discovering hidden courage.
+                </div>
+                <p>Price: $14.99</p>
+            </div>
+
+            <div class="book-card">
+                <div class="image-wrapper">
+                    <a href="{{ url_for('book_2_preview') }}" target="_blank">
+                        <img src="{{ url_for('static', filename='books/grumpy_2_cover.png') }}"
+                            alt="Grumpy Shark's Ocean Quest">
+                        <div class="click-overlay">📖 Click to view sample</div>
+                    </a>
+                </div>
+                <h2>Grumpy Shark's Ocean Quest</h2>
+                <div class="book-popup">
+                    A brave search beyond the reef as Grumpy Shark navigates swirling tides and a jellyfish clue.
+                </div>
+                <p>Price: $19.99</p>
+            </div>
+
+            <div class="book-card">
+                <div class="image-wrapper">
+                    <a href="{{ url_for('book_3_preview') }}" target="_blank">
+                        <img src="{{ url_for('static', filename='books/grumpy_3_cover.png') }}"
+                            alt="Grumpy Shark's Deepest Mystery">
+                        <div class="click-overlay">📖 Click to view sample</div>
+                    </a>
+                </div>
+                <h2>Grumpy Shark's Deepest Mystery</h2>
+                <div class="book-popup">
+                    Mysterious currents, forgotten fossils, and the glowing truth of Grumpy's origins rise from the
+                    depths.
+                </div>
+                <p>Price: $22.99</p>
+                <p>Coming Soon</p>
+            </div>
+
+        </div>
+
+        <a href="/contact?subject=Grumpy%20Shark%20Book%20Inquiry&body=Hello,%20I'd%20like%20to%20purchase%20this%20book!"
+            class="link-box">
+            Contact Author for Payment
+        </a>
+
+        <a href="{{ url_for('home') }}" class="home-btn">🏠 Back to Home</a>
+    </div>
+
+    <p id="email-confirmation" class="hidden">✅ Your email request is being prepared...</p>
+
+    <script>
+        const link = document.getElementById('send-email-link');
+        const confirmation = document.getElementById('email-confirmation');
+
+        if (link) {
+            link.addEventListener('click', () => {
+                confirmation.textContent = "📬 You're being redirected to the contact form...";
+                confirmation.classList.remove('hidden');
+                setTimeout(() => confirmation.classList.add('hidden'), 5000);
+            });
+        }
+    </script>
+</body>
+
+</html>

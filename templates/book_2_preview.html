@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Preview - Book 2</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+    <div class="sample-preview">
+        <h1>Grumpy Shark's Ocean Quest - Preview</h1>
+        <div class="sample-pages">
+            <img src="{{ url_for('static', filename='books/sample_page_4.jpg') }}" alt="Sample Page 4">
+            <img src="{{ url_for('static', filename='books/sample_page_5.jpg') }}" alt="Sample Page 5">
+            <img src="{{ url_for('static', filename='books/sample_page_6.jpg') }}" alt="Sample Page 6">
+        </div>
+
+        <div class="book-preview-bio">
+            <h2>About This Book</h2>
+            <p>
+                In *Grumpy Shark's Second Adventure*, our cranky hero embarks on a journey through the vibrant
+                underwater world, meeting some new friends to play with at school camp.
+            </p>
+        </div>
+
+        <a href="{{ url_for('books') }}" class="link-box">← Back to Book Gallery</a>
+    </div>
+</body>
+
+</html>

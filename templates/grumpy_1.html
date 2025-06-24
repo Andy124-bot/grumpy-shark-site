@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Grumpy Shark</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1 class="welcome-text">Welcome to the Grumpy Shark Adventure!</h1>
+    </header>
+
+    <main>
+        <div class="navigation-links">
+            <a href="/" class="link-box">🏠 Home</a>
+            <a href="/books" class="link-box">📖 Back to Books</a>
+        </div>
+
+        <h2>Grumpy Shark! The First book in an Amazing Adventure filled Underwater World!</h2>
+        <p><span class="bold-text">The first adventure of Grumpy Shark! Dive into the deep sea...</span></p>
+
+        <div class="character-list">
+            <div class="character-card">
+                <img src="{{ url_for('static', filename='characters/grumpy.png') }}" alt="Grumpy Shark">
+                <p>Grumpy Shark</p>
+                <div class="character-bio">The deep-sea explorer with a tough attitude.</div>
+            </div>
+
+            <div class="character-card">
+                <img src="{{ url_for('static', filename='characters/irene_lightfish.png') }}" alt="Irene the Light Fish">
+                <p>Irene the Light Fish</p>
+                <div class="character-bio">She shines in the darkest waters.</div>
+            </div>
+
+            <div class="character-card">
+                <img src="{{ url_for('static', filename='characters/craig.png') }}" alt="Craig the Sea Turtle">
+                <p>Craig</p>
+                <div class="character-bio">The wise and gentle bus driver and guardian of the reef.</div>
+            </div>
+
+            <div class="character-card">
+                <img src="{{ url_for('static', filename='characters/jessica_gill.png') }}" alt="Jessica">
+                <p>Jessica Gill</p>
+                <div class="character-bio">The graceful and brave sister to Jack.</div>
+            </div>
+
+            <div class="character-card">
+                <img src="{{ url_for('static', filename='characters/mum_gill.png') }}" alt="Mum Gill">
+                <p>Mum Gill</p>
+                <div class="character-bio">The caring and nurturing mother to Jack and Jessica.</div>
+            </div>
+
+            <div class="character-card">
+                <img src="{{ url_for('static', filename='characters/jack_gill.png') }}" alt="Jack the Gill">
+                <p>Jack Gill</p>
+                <div class="character-bio">The adventurous and curious brother to Jessica.</div>
+            </div>
+
+            <div class="character-card">
+                <img src="{{ url_for('static', filename='characters/dad_gill.png') }}" alt="Dad Gill">
+                <p>Dad Gill the Dentist</p>
+                <div class="character-bio">A strong and supportive father to Jack and Jessica.</div>
+            </div>
+
+            <div class="book-info">
+                <h2>Book 1: Grumpy Shark's First Adventure</h2>
+                <p>Join Grumpy Shark on an underwater journey filled with mystery, fun, and unforgettable friends.</p>
+                <a href="/payment" class="buy-btn">Get the Book</a>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Inside the Book</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="inside-book-container">
+        <h1>Inside the Adventure</h1>
+
+        <div class="inside-book-gallery">
+            <img src="{{ url_for('static', filename='books/sample_page1.png') }}" alt="Sample Page 1">
+            <img src="{{ url_for('static', filename='books/sample_page2.png') }}" alt="Sample Page 2">
+            <img src="{{ url_for('static', filename='books/sample_page3.png') }}" alt="Sample Page 3">
+        </div>
+
+        <p class="book-preview-text">
+            Dive into a few sneak peek pages from Grumpy Shark’s world! From stormy reefs to mischievous turtles, the adventure unfolds with every turn.
+        </p>
+
+        <div class="navigation-links">
+            <a href="/bookPages" class="link-box">⬅ Back to Book Gallery</a>
+            <a href="/payment" class="link-box">💳 Proceed to Purchase</a>
+        </div>
+    </div>
+</body>
+</html>

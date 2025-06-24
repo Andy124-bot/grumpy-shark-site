@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Grumpy Shark Book Gallery</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+
+    <div class="book-gallery">
+
+        <a href="{{ url_for('bio_book1') }}" class="book-tile" id="book1">
+            <img src="{{ url_for('static', filename='books/grumpy_1_cover.png') }}"
+                alt="Grumpy Shark's First Adventure">
+            <p><strong>Book 1:</strong> Grumpy Shark's First Adventure</p>
+        </a>
+
+        <a href="{{ url_for('bio_book2') }}" class="book-tile" id="book2">
+            <img src="{{ url_for('static', filename='books/grumpy_2_cover.png') }}" alt="Grumpy Shark's Ocean Quest">
+            <p><strong>Book 2:</strong> Grumpy Shark's Ocean Quest</p>
+        </a>
+
+        <a href="{{ url_for('bio_book3') }}" class="book-tile" id="book3">
+            <img src="{{ url_for('static', filename='books/grumpy_3_cover.png') }}"
+                alt="Grumpy Shark's Deepest Mystery">
+            <p><strong>Book 3:</strong> Grumpy Shark's Deepest Mystery</p>
+
+        </a>
+
+    </div>
+
+    <div class="navigation-links">
+        <a href="/payment" class="link-box">💳 Go to Purchase</a>
+        <a href="{{ url_for('home') }}" class="link-box">🏠 Back to Home</a>
+    </div>
+
+</body>
+
+</html>

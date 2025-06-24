@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Grumpy Shark Books</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+    <header>
+        <h1 class="book_page_text">Grumpy Sharks Book Collection</h1>
+    </header>
+
+    <div class="book-list">
+        <!-- Book 1 links to character showcase -->
+        <a href="/grumpy_1">
+            <img src="{{ url_for('static', filename='books/grumpy_1_cover.png') }}" alt="Grumpy Shark: Origins">
+        </a>
+
+        <!-- Book 2 and 3 remain as is (you can update them when ready) -->
+        <a href="/grumpy_2">
+            <img src="{{ url_for('static', filename='books/grumpy_2_cover.png') }}" alt="Grumpy Shark and the Deep Sea">
+        </a>
+
+        <a href="/grumpy_3">
+            <img src="{{ url_for('static', filename='books/grumpy_3_cover.png') }}" alt="The Final Tide">
+        </a>
+        <p style="color: gray; font-weight: bold;">Coming Soon</p>
+    </div>
+    <div class="character-intro">
+        <h2>🐙 Click Books To Meet the Characters!</h2>
+        <p>
+            From Grumpy Shark's grouchy grin to Jellybean the nervous jellyfish, every sea creature has a story to tell.
+            <br>
+            Tap a book cover to discover who's hiding inside — each one links to a sneak peek into their underwater
+            world!
+        </p>
+    </div>
+    <div class="author-bio">
+        <h2>🖋️ About the Author</h2>
+        <p>
+            <strong>Craig</strong> is a creative soul with a passion for web storytelling, clean design, and fin-tastic
+            adventures. When he's not debugging code or refining color contrast for accessibility, he's dreaming up
+            underwater worlds where even the grumpiest shark finds their sparkle. Grumpy Shark is more than just a
+            character
+            — it's a splash of courage, curiosity, and a wink to the kid in all of us.
+        </p>
+    </div>
+    <div class="navigation-links">
+        <a href="{{ url_for('home') }}" class="link-box">🏠 Back to Home</a>
+    </div>
+</body>
+
+</html>
