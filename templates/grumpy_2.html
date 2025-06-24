@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Grumpy Shark and the Deep Sea</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+    <main>
+        <div class="navigation-links">
+            <a href="/" class="link-box">🏠 Home</a>
+            <a href="/books" class="link-box">📖 Back to Books</a>
+        </div>
+
+        <h2>Grumpy Shark Adventures!</h2>
+        <p class="book-description">The second adventure of Grumpy Shark! Dive into the deep sea...</p>
+
+        <div class="character-list">
+            <!-- Character Cards (manual entries + Jinja loop) -->
+            <div class="character-card">
+                <img src="{{ url_for('static', filename='characters/grumpy.png') }}" alt="Grumpy Shark">
+                <p>Grumpy Shark</p>
+                <div class="character-bio">The deep-sea explorer with a tough attitude.</div>
+            </div>
+
+            <div class="character-card">
+                <img src="{{ url_for('static', filename='characters/irene_lightfish.png') }}"
+                    alt="Irene the Light Fish">
+                <p>Irene the Light Fish</p>
+                <div class="character-bio">She shines in the darkest waters.</div>
+            </div>
+
+            <div class="character-card">
+                <img src="{{ url_for('static', filename='characters/jack_gill.png') }}" alt="Jack Gill">
+                <p>Jack Gill</p>
+                <div class="character-bio">Curious, brave, and always hungry for adventure.</div>
+            </div>
+
+            <div class="character-card">
+                <img src="{{ url_for('static', filename='characters/Jessica_gill.png') }}" alt="Jessica Gill">
+                <p>Jessica Gill</p>
+                <div class="character-bio">Smart and caring with a splash of mischief.</div>
+            </div>
+
+            <div class="character-card">
+                <img src="{{ url_for('static', filename='characters/mum_gill.png') }}" alt="Mum Gill">
+                <p>Mum Gill</p>
+                <div class="character-bio">Loving, wise, and always prepared with snacks.</div>
+            </div>
+
+            {% for character in ["craig", "destiny", "kristine", "maz", "maz_hiding", "rylee", "mckenna", "puffy"] %}
+            <div class="character-card">
+                <img src="{{ url_for('static', filename='characters/' + character + '.png') }}"
+                    alt="{{ character.capitalize() }}">
+                <p>{{ character.capitalize() }}</p>
+                <div class="character-bio">Short bio for {{ character.capitalize() }}.</div>
+            </div>
+            {% endfor %}
+        </div>
+
+        <div class="book-info">
+            <h2>Book 2: Grumpy Shark's Next Challenge</h2>
+            <p>Grumpy Shark faces unexpected twists and new allies in his latest adventure.</p>
+            <a href="/payment" class="buy-btn">Get the Book</a>
+        </div>
+
+        <!-- 🎙️ Narration Button -->
+        <button onclick="narratePage()">🔊 Read This Page Aloud</button>
+        <button onclick="stopNarration()">⏹️ Stop Narration</button>
+    </main>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+
+</html>

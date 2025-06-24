@@ -1,0 +1,125 @@
+// 🎙️ Narration functions — must be global so HTML buttons can access them
+function speakText(text) {
+    const utterance = new SpeechSynthesisUtterance(text);
+    utterance.lang = 'en-AU';
+    speechSynthesis.speak(utterance);
+}
+
+window.narratePage = function () {
+    const main = document.querySelector('main');
+    if (main) {
+        speakText(main.innerText);
+    }
+};
+
+window.stopNarration = function () {
+    speechSynthesis.cancel();
+};
+
+// 📦 DOM-related scripts
+document.addEventListener("DOMContentLoaded", function () {
+    console.log("JavaScript loaded!");
+    const readBtn = document.getElementById("read-btn");
+    const stopBtn = document.getElementById("stop-btn");
+
+    if (readBtn) readBtn.addEventListener("click", narratePage);
+    if (stopBtn) stopBtn.addEventListener("click", stopNarration);
+
+    // 📩 Auto-fill Contact Form
+    const urlParams = new URLSearchParams(window.location.search);
+    const subjectParam = urlParams.get("subject");
+    const bodyParam = urlParams.get("body");
+
+    if (subjectParam) {
+        const subjectField = document.getElementById("subject");
+        if (subjectField) subjectField.value = subjectParam;
+    }
+
+    if (bodyParam) {
+        const messageField = document.getElementById("message");
+        if (messageField) messageField.value = bodyParam;
+    }
+
+    // 📩 Email form handling
+    const confirmationMessage = document.getElementById("confirmation-message");
+    const emailLink = document.getElementById("send-email-link");
+
+    if (emailLink) {
+        emailLink.addEventListener("click", function () {
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const message = document.getElementById("message").value;
+
+            if (!name || !email || !message) {
+                alert("Please fill in all fields before sending!");
+                return;
+            }
+
+            const mailtoLink = `mailto:grumpsharkwebsite@gmail.com` +
+                `?subject=Contact%20Grumpy%20Shark` +
+                `&body=Name:%20${encodeURIComponent(name)}%0A` +
+                `Email:%20${encodeURIComponent(email)}%0A` +
+                `Message:%20${encodeURIComponent(message)}`;
+
+            window.location.href = mailtoLink;
+
+            confirmationMessage.textContent =
+                "📬 Your email app should now be open—click Send to complete your message.";
+            confirmationMessage.classList.remove("hidden");
+
+            setTimeout(() => confirmationMessage.classList.add("hidden"), 6000);
+        });
+    }
+
+    // 🌊 Fade-in sections on scroll
+    const sections = document.querySelectorAll(".section");
+
+    function revealSections() {
+        sections.forEach((section) => {
+            const rect = section.getBoundingClientRect();
+            if (rect.top < window.innerHeight * 0.9) {
+                section.classList.add("visible");
+            }
+        });
+    }
+
+    window.addEventListener("scroll", revealSections);
+    revealSections();
+
+    // 🎨 Button hover effect
+    const buttons = document.querySelectorAll(".button");
+
+    buttons.forEach((button) => {
+        button.addEventListener("mouseover", function () {
+            button.style.transform = "scale(1.1)";
+            button.style.boxShadow = "0 4px 10px rgba(0, 102, 255, 0.5)";
+        });
+
+        button.addEventListener("mouseout", function () {
+            button.style.transform = "scale(1)";
+            button.style.boxShadow = "none";
+        });
+    });
+
+    // 🐠 Floating sway animation
+    const floatingElements = document.querySelectorAll(".oceanic-transition");
+
+    function animateFloatingElements() {
+        floatingElements.forEach((element) => {
+            let position = 0;
+            let direction = 1;
+
+            setInterval(() => {
+                position += direction * 0.5;
+                element.style.transform = `translateY(${position}px)`;
+
+                if (position > 5 || position < -5) {
+                    direction *= -1;
+                }
+            }, 100);
+        });
+    }
+
+
+    animateFloatingElements();
+});

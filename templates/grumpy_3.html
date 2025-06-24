@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Grumpy Shark and the Deep Sea</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+    <main>
+        <div class="navigation-links">
+            <a href="/" class="link-box">🏠 Home</a>
+            <a href="/books" class="link-box">📖 Back to Books</a>
+        </div>
+
+        <h2>Grumpy Shark Adventures</h2>
+        <p>The first adventure of Grumpy Shark! Dive into the deep sea...</p>
+
+        <div class="character-list">
+            <div class="character-card"><img src="{{ url_for('static', filename='characters/grumpy.png') }}"
+                    alt="Grumpy Shark">
+                <p>Grumpy Shark</p>
+                <div class="character-bio">The deep-sea explorer with a tough attitude.</div>
+            </div>
+            <div class="character-card"><img src="{{ url_for('static', filename='characters/jack_gill.png') }}"
+                    alt="Jack Gill">
+                <p>Jack Gill</p>
+                <div class="character-bio">Brave and curious — he’s always ready for the next adventure.</div>
+            </div>
+            <div class="character-card"><img src="{{ url_for('static', filename='characters/jessica_gill.png') }}"
+                    alt="Jessica Gill">
+                <p>Jessica Gill</p>
+                <div class="character-bio">Smart and witty, with a heart for exploration.</div>
+            </div>
+            <div class="character-card"><img src="{{ url_for('static', filename='characters/mum_gill.png') }}"
+                    alt="Mum Gill">
+                <p>Mum Gill</p>
+                <div class="character-bio">Gentle and nurturing with an endless stash of snacks.</div>
+            </div>
+            <div class="character-card"><img src="{{ url_for('static', filename='characters/dad_gill.png') }}"
+                    alt="Dad Gill">
+                <p>Dad Gill</p>
+                <div class="character-bio">A supportive shark dentist with a tooth for wisdom.</div>
+            </div>
+            <div class="character-card"><img src="{{ url_for('static', filename='characters/craig.png') }}" alt="Craig">
+                <p>Craig</p>
+                <div class="character-bio">The wise and gentle bus driver of the reef.</div>
+            </div>
+            <div class="character-card"><img src="{{ url_for('static', filename='characters/destiny.png') }}"
+                    alt="Destiny">
+                <p>Destiny</p>
+                <div class="character-bio">Mysterious and wise — her voice echoes from the deep.</div>
+            </div>
+            <div class="character-card"><img src="{{ url_for('static', filename='characters/irene_lightfish.png') }}"
+                    alt="Irene">
+                <p>Irene</p>
+                <div class="character-bio">She lights up the depths and leads with courage.</div>
+            </div>
+            <div class="character-card"><img src="{{ url_for('static', filename='characters/maz.png') }}" alt="Maz">
+                <p>Maz</p>
+                <div class="character-bio">A swift and mysterious traveler from the deep.</div>
+            </div>
+            <div class="character-card"><img src="{{ url_for('static', filename='characters/maz_hiding.png') }}"
+                    alt="Maz Hiding">
+                <p>Maz (Hiding)</p>
+                <div class="character-bio">Sometimes invisible. Always listening.</div>
+            </div>
+            <div class="character-card"><img src="{{ url_for('static', filename='characters/mckenna.png') }}"
+                    alt="McKenna">
+                <p>McKenna</p>
+                <div class="character-bio">Crafty and curious — always building something bright.</div>
+            </div>
+            <div class="character-card"><img src="{{ url_for('static', filename='characters/rylee.png') }}" alt="Rylee">
+                <p>Rylee</p>
+                <div class="character-bio">Loyal like a sonar echo, and fast like a flash.</div>
+            </div>
+            <div class="character-card"><img src="{{ url_for('static', filename='characters/kristine.png') }}"
+                    alt="Kristine">
+                <p>Kristine</p>
+                <div class="character-bio">She brings sparkle and a strong sense of right and wrong.</div>
+            </div>
+
+            <div class="character-card"><img src="{{ url_for('static', filename='characters/lisa.png') }}" alt="Lisa">
+                <p>Lisa</p>
+                <div class="character-bio">Compassionate and clever, with a calm voice of reason.</div>
+            </div>
+            <div class="character-card"><img src="{{ url_for('static', filename='characters/orion.png') }}" alt="Orion">
+                <p>Orion</p>
+                <div class="character-bio">A bold adventurer with a twinkle of mystery in every fin.</div>
+            </div>
+            <div class="character-card"><img src="{{ url_for('static', filename='characters/matilda.png') }}"
+                    alt="Matilda">
+                <p>Matilda</p>
+                <div class="character-bio">Fearless and fun — with a laugh that echoes through coral.</div>
+            </div>
+            <div class="character-card"><img src="{{ url_for('static', filename='characters/lacy.png') }}" alt="Lacy">
+                <p>Lacy</p>
+                <div class="character-bio">Glides gently through trouble but always stands her ground.</div>
+            </div>
+            <div class="character-card"><img src="{{ url_for('static', filename='characters/bon_bon.png') }}"
+                    alt="Bon Bon">
+                <p>Bon Bon</p>
+                <div class="character-bio">Small, sneaky, and surprisingly sweet.</div>
+            </div>
+            <div class="character-card"><img src="{{ url_for('static', filename='characters/ronnie.png') }}"
+                    alt="Ronnie">
+                <p>Ronnie</p>
+                <div class="character-bio">Keeps things bubbly even when the current gets rough.</div>
+            </div>
+            <div class="character-card"><img src="{{ url_for('static', filename='characters/polly.png') }}" alt="Polly">
+                <p>Polly</p>
+                <div class="character-bio">Polite, playful, and perfectly punctual.</div>
+            </div>
+            <div class="character-card"><img src="{{ url_for('static', filename='characters/ollie.png') }}" alt="Ollie">
+                <p>Ollie</p>
+                <div class="character-bio">Zooms around with endless energy and curiosity.</div>
+            </div>
+        </div>
+
+        <div class="book-info">
+            <h2>Book 3: Grumpy Shark's Deepest Mystery</h2>
+            <p>The ocean holds secrets, and Grumpy Shark is about to uncover the biggest one yet!</p>
+            <button class="buy-btn" onclick="window.location.href='/payment';">Get the Book</button>
+        </div>
+        </div>
+
+        <button onclick="narratePage()">🔊 Read This Page Aloud</button>
+        <button onclick="stopNarration()">⏹️ Stop Narration</button>
+    </main>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+
+</html>

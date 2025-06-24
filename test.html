@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Test Narration</title>
+    <script>
+        function speakText(text) {
+            const utterance = new SpeechSynthesisUtterance(text);
+            utterance.lang = 'en-AU';
+            speechSynthesis.speak(utterance);
+        }
+
+        function narratePage() {
+            const main = document.querySelector('main');
+            if (main) {
+                speakText(main.innerText);
+            }
+        }
+
+        function stopNarration() {
+            speechSynthesis.cancel();
+        }
+
+        console.log("Test page JS loaded");
+    </script>
+</head>
+
+<body>
+    <main>
+        <h1>Grumpy Shark Test</h1>
+        <p>This is a test of narration on a plain HTML page.</p>
+        <button onclick="narratePage()">🔊 Read Aloud</button>
+        <button onclick="stopNarration()">⏹️ Stop</button>
+    </main>
+</body>
+
+</html>

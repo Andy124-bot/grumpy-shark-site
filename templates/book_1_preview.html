@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Preview - Book 1</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+    <main class="sample-preview">
+        <h1>Grumpy Shark's First Adventure - Preview</h1>
+
+        <div class="sample-pages">
+            <img src="{{ url_for('static', filename='books/sample_page_1.jpg') }}" alt="Sample Page 1">
+            <img src="{{ url_for('static', filename='books/sample_page_2.jpg') }}" alt="Sample Page 2">
+            <img src="{{ url_for('static', filename='books/sample_page_3.jpg') }}" alt="Sample Page 3">
+        </div>
+
+        <div class="book-preview-bio">
+            <h2>About This Book</h2>
+            <p>
+                In <em>Grumpy Shark's First Adventure</em>, our cranky hero lets out some awful, scary grumbles. The
+                reason? He hasn't eaten in a long time because of a bad tooth. But with the help of others, Grumpy
+                learns to face his fears, heal up, and find friendship where he least expects it.
+            </p>
+        </div>
+
+        <button onclick="narratePage()">🔊 Read This Page Aloud</button>
+        <button onclick="stopNarration()">⏹️ Stop Narration</button>
+        <a href="{{ url_for('books') }}" class="link-box">← Back to Books</a>
+    </main>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Contact Grumpy Shark</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+    <main>
+        <header>
+            <h1>Get in Touch with Grumpy Shark</h1>
+            <a href="{{ url_for('home') }}" class="home-btn">Back to Home</a>
+            <p class="share">Have questions or want to share your thoughts? Fill out the form below!</p>
+        </header>
+
+        <div class="contact-container">
+            <form class="contact-form" onsubmit="return false;">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+                <label for="subject">Subject:</label>
+                <input type="text" id="subject" name="subject" placeholder="Enter subject" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" placeholder="Type your message..." required></textarea>
+
+                <a href="#" id="send-email-link" class="send-button">📩 Send Email</a>
+
+                <p id="confirmation-message" class="hidden">
+                    Your email app should now be open—click send to complete your message.
+                </p>
+            </form>
+        </div>
+
+        <!-- 🔊 Narration Button -->
+        <button onclick="narratePage()">🔊 Read This Page Aloud</button>
+        <button onclick="stopNarration()">⏹️ Stop Narration</button>
+    </main>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const urlParams = new URLSearchParams(window.location.search);
+            const subjectParam = urlParams.get("subject");
+            const bodyParam = urlParams.get("body");
+
+            if (subjectParam) document.getElementById("subject").value = subjectParam;
+            if (bodyParam) document.getElementById("message").value = bodyParam;
+
+            document.getElementById("send-email-link").addEventListener("click", function (e) {
+                e.preventDefault();
+
+                const name = document.getElementById("name").value.trim();
+                const email = document.getElementById("email").value.trim();
+                const subject = document.getElementById("subject").value.trim();
+                const message = document.getElementById("message").value.trim();
+                const confirmation = document.getElementById("confirmation-message");
+
+                if (!name || !email || !subject || !message) {
+                    alert("Please fill in all fields before sending.");
+                    return;
+                }
+
+                const mailtoLink = `mailto:grumpsharkwebsite@gmail.com` +
+                    `?subject=${encodeURIComponent(subject)}` +
+                    `&body=Name:%20${encodeURIComponent(name)}%0A` +
+                    `Email:%20${encodeURIComponent(email)}%0A` +
+                    `Message:%20${encodeURIComponent(message)}`;
+
+                window.location.href = mailtoLink;
+
+                confirmation.textContent = "Your email app should now be open—click send to complete your message.";
+                confirmation.classList.remove("hidden");
+
+                setTimeout(() => confirmation.classList.add("hidden"), 6000);
+            });
+        });
+    </script>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+
+</html>

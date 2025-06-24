@@ -2,8 +2,8 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Book Payment</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
     <style>
@@ -94,6 +94,9 @@
         </a>
 
         <a href="{{ url_for('home') }}" class="home-btn">🏠 Back to Home</a>
+
+        <button onclick="narratePage()">🔊 Read This Page Aloud</button>
+        <button onclick="stopNarration()">⏹️ Stop Narration</button>
     </div>
 
     <p id="email-confirmation" class="hidden">✅ Your email request is being prepared...</p>

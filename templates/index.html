@@ -22,11 +22,13 @@
     <!-- Main Content -->
     <main>
         <h1>Grumpy Shark's Menu</h1>
-        <button onclick="narratePage()">🔊 Read Aloud</button>
+        <p>🦈 Hungry for adventure? Grumpy Shark's menu is full of fun! Click the buttons above to explore the reef.</p>
+        <button id="read-btn">🔊 Read Aloud</button>
+        <button id="stop-btn">⏹️ Stop Narration</button>
     </main>
 
-    <!-- Voice Narration Script (should only be in script.js) -->
-    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    <!-- Scripts -->
+    <script src="{{ url_for('static', filename='script.js') }}?v=2"></script>
 </body>
 
 </html>
