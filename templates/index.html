@@ -22,27 +22,10 @@
     <!-- Main Content -->
     <main>
         <h1>Grumpy Shark's Menu</h1>
-        <button onclick="speakText('Welcome to Grumpy Shark’s Menu')">Read Aloud</button>
+        <button onclick="narratePage()">🔊 Read Aloud</button>
     </main>
 
-    <!-- JavaScript Files -->
-    <script src="{{ url_for('static', filename='script.js') }}"></script>
-
-    <!-- Voice Narration Script -->
-    <script>
-        function speakText(text) {
-            const utterance = new SpeechSynthesisUtterance(text);
-            utterance.lang = 'en-AU';
-            speechSynthesis.speak(utterance);
-        }
-
-        window.addEventListener('DOMContentLoaded', () => {
-            const title = document.querySelector('main h1');
-            if (title) {
-                speakText(title.textContent);
-            }
-        });
-    </script>
+    <!-- Voice Narration Script (should only be in script.js) -->
     <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
 
