@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>Contact Grumpy Shark</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
+
 <body>
     <header>
         <h1>Get in Touch with Grumpy Shark</h1>
         <a href="{{ url_for('home') }}" class="home-btn">Back to Home</a>
-        <p class="share">Have questions or want to share your thoughts? Fill out the form below!</p>  
+        <p class="share">Have questions or want to share your thoughts? Fill out the form below!</p>
     </header>
 
     <div class="contact-container">
@@ -31,7 +33,8 @@
                 📩 Send Email
             </a>
 
-            <p id="confirmation-message" class="hidden">Your email app should now be open—click send to complete your message.</p>
+            <p id="confirmation-message" class="hidden">Your email app should now be open—click send to complete your
+                message.</p>
         </form>
     </div>
 
@@ -73,5 +76,7 @@
             setTimeout(() => confirmation.classList.add("hidden"), 6000);
         });
     </script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
+
 </html>

@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>Grumpy Shark's Characters</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
+
 <body>
     <header>
         <h1>Grumpy Shark's Characters</h1>
@@ -19,7 +21,8 @@
             </div>
 
             <div class="character-card">
-                <img src="{{ url_for('static', filename='characters/irene_lightfish.png') }}" alt="Irene the Light Fish">
+                <img src="{{ url_for('static', filename='characters/irene_lightfish.png') }}"
+                    alt="Irene the Light Fish">
                 <p>Irene the Light Fish - She shines in the darkest waters.</p>
             </div>
 
@@ -44,5 +47,7 @@
             </div>
         </div>
     </main>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
+
 </html>

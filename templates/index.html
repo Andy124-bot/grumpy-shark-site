@@ -1,31 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Grumpy Shark's World</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
-<body>
 
+<body>
     <!-- Improved Navigation -->
     <nav>
         <header>
             <h1 class="swaying-text">Welcome to Grumpy Shark's World</h1>
         </header>
-        
         <div class="links-container">
             <a href="/books" class="link-box">Books</a>
-           
         </div>
     </nav>
 
     <!-- Main Content -->
     <main>
-       
+        <h1>Grumpy Shark's Menu</h1>
+        <button onclick="speakText('Welcome to Grumpy Shark’s Menu')">Read Aloud</button>
+    </main>
 
-    <!-- JavaScript -->
+    <!-- JavaScript Files -->
     <script src="{{ url_for('static', filename='script.js') }}"></script>
 
+    <!-- Voice Narration Script -->
+    <script>
+        function speakText(text) {
+            const utterance = new SpeechSynthesisUtterance(text);
+            utterance.lang = 'en-AU';
+            speechSynthesis.speak(utterance);
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            const title = document.querySelector('main h1');
+            if (title) {
+                speakText(title.textContent);
+            }
+        });
+    </script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
+
 </html>

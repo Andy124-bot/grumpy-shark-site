@@ -1,10 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>Grumpy Shark</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
-    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bangers&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
     <header>
         <h1 class="welcome-text">Welcome to the Grumpy Shark Adventure!</h1>
@@ -27,7 +31,8 @@
             </div>
 
             <div class="character-card">
-                <img src="{{ url_for('static', filename='characters/irene_lightfish.png') }}" alt="Irene the Light Fish">
+                <img src="{{ url_for('static', filename='characters/irene_lightfish.png') }}"
+                    alt="Irene the Light Fish">
                 <p>Irene the Light Fish</p>
                 <div class="character-bio">She shines in the darkest waters.</div>
             </div>
@@ -69,5 +74,7 @@
             </div>
         </div>
     </main>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
+
 </html>
