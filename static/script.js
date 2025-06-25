@@ -1,39 +1,58 @@
-// 🎙️ Narration functions — available globally
-function speakText(text) {
-    const utterance = new SpeechSynthesisUtterance(text);
-    utterance.lang = 'en-AU';
-    speechSynthesis.speak(utterance);
-}
 
-function narratePage() {
-    const main = document.querySelector('main');
+document.addEventListener("DOMContentLoaded", function () {
+    console.log("JavaScript loaded!");
+
     const readBtn = document.getElementById("read-btn");
-    if (main) {
-        speakText(main.innerText);
-        if (readBtn) readBtn.classList.add("speaking");
+    const stopBtn = document.getElementById("stop-btn");
+
+    // ✅ Feature Check
+    if (!('speechSynthesis' in window)) {
+        if (readBtn) {
+            readBtn.addEventListener("click", () => {
+                alert("🔇 Voice narration isn't supported on this device or browser.");
+            });
+        }
+        return; // Abort narration setup
     }
-}
 
-function stopNarration() {
-    const readBtn = document.getElementById("read-btn");
-    speechSynthesis.cancel();
-    if (readBtn) readBtn.classList.remove("speaking");
-}
+    // 🍎 Optional: iOS friendly heads-up
+    const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
+    if (isIOS && readBtn) {
+        readBtn.addEventListener("click", () => {
+            alert("📱 Voice narration may not work on iPhones due to Safari limitations.");
+        });
+    }
 
-// ✅ Bind narration buttons immediately (since script is at end of <body>)
-const readBtn = document.getElementById("read-btn");
-const stopBtn = document.getElementById("stop-btn");
+    // 🎙️ Narration functions
+    function speakText(text) {
+        const utterance = new SpeechSynthesisUtterance(text);
+        utterance.lang = 'en-AU';
+        speechSynthesis.speak(utterance);
+    }
 
-if (readBtn) {
-    readBtn.addEventListener("click", narratePage);
-    console.log("✅ Read button is ready!");
-}
+    function narratePage() {
+        const main = document.querySelector('main');
+        if (main) {
+            speakText(main.innerText);
+            readBtn.classList.add("speaking");
+        }
+    }
 
-if (stopBtn) {
-    stopBtn.addEventListener("click", stopNarration);
-    console.log("✅ Stop button is ready!");
-}
+    function stopNarration() {
+        speechSynthesis.cancel();
+        readBtn.classList.remove("speaking");
+    }
 
+    if (readBtn) {
+        readBtn.addEventListener("click", narratePage);
+        console.log("✅ Read button is ready!");
+    }
+
+    if (stopBtn) {
+        stopBtn.addEventListener("click", stopNarration);
+        console.log("✅ Stop button is ready!");
+    }
+});
 // 📦 DOM-related scripts
 document.addEventListener("DOMContentLoaded", function () {
     console.log("JavaScript loaded!");
