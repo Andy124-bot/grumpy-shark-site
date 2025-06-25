@@ -1,0 +1,29 @@
+Grumpy Shark Adventures – Portfolio Entry
+
+Overview:
+An interactive, voice-narrated web experience built with accessibility and storytelling in mind. This project blends vibrant design, dynamic page routing, and speech synthesis to deliver an engaging journey for all users — including those with visual or cognitive needs.
+
+Key Features:
+- 🔊 Voice narration on every page using Web Speech API
+- 🌈 Bold, responsive design with CSS animation and hover effects
+- ♿️ WCAG 2.1 AA compliance — passing accessibility checks across all pages
+- 🧭 Flask-powered site navigation and routing
+- 🖼️ Thoughtful use of imagery, layout, and narration to enhance the user’s experience
+
+Technical Stack:
+HTML, CSS, JavaScript, Flask, GitHub Pages
+
+My Contributions:
+- Designed and coded all pages with semantic HTML and accessible styling
+- Implemented narration buttons and custom animations for visual feedback
+- Diagnosed and resolved deep event-binding and layering issues
+- Completed thorough testing for responsiveness, navigation, and assistive tech compatibility
+
+Why it Matters:
+Grumpy Shark isn’t just a character — he’s a symbol of inclusion. This project represents my commitment to building web experiences that are not only beautiful and responsive, but meaningfully accessible.
+
+Live Demo:
+[https://grumpy-shark-site.onrender.com/]
+
+GitHub Repo:
+[https://github.com/Andy124-bot/grumpy-shark-site]
