@@ -3,6 +3,7 @@
 import logging
 from flask import Flask, render_template, request, redirect, url_for
 
+
 # Configure logging
 logging.basicConfig(
     filename="grumpyshark.log",
@@ -74,6 +75,10 @@ def book_2_preview():
 def book_3_preview():
     """Display the preview page for Grumpy Shark's Deepest Mystery."""
     return render_template("book_3_preview.html")
+
+def favicon():
+    """Serve the favicon for the site."""
+    return redirect(url_for('static', filename='favicon.ico'))
 
 
 
