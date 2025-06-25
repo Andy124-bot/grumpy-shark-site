@@ -15,13 +15,24 @@
 
     <!-- ✅ Main content for screen readers and narration -->
     <main id="main">
-        <h1>Grumpy Shark Adventures!</h1>
-        <p>Welcome to Grumpy's undersea world, where fins meet fun and stories come to life...</p>
+        <section class="book-display">
+            <h2>Click Author Button ToPurchase Grumpy's Adventures</h2>
+            <div class="book-row">
+                <div class="book-tile">
+                    <img src="{{ url_for('static', filename='books/grumpy_1_cover.png') }}" alt="Grumpy Shark Book 1 Cover">
+                    <p class="book-label">Grumpy Shark Book 1  $15.00</p>
+                </div>
+                <div class="book-tile">
+                    <img src="{{ url_for('static', filename='books/grumpy_2_cover.png') }}" alt="Grumpy Shark Book 2 Cover">
+                    <p class="book-label">Grumpy Shark Book 2  $20.00</p>
+                </div>
+                <div class="book-tile">
+                    <img src="{{ url_for('static', filename='books/grumpy_3_cover.png') }}" alt="Grumpy Shark Book 3 Cover">
+                    <p class="book-label">Grumpy Shark Book 3  $25.00</p>
+                </div>
+            </div></section>
 
-        <!-- Add any homepage content you'd like inside this <main> -->
-        <!-- book gallery, featured characters, etc. -->
-
-        <a href="{{ url_for('purchase') }}" class="home-btn">📚 Browse Books</a>
+        <a href="{{ url_for('contact') }}" class="home-btn">📚 Contact Author for Purchase</a>
     </main>
 
     <script src="{{ url_for('static', filename='script.js') }}"></script>

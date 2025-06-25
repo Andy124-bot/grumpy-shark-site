@@ -321,18 +321,43 @@ h2 {
 
 h2 {
     font-weight: bold;
+    color: red;
 }
 
 .book-info {
     background: rgba(0, 40, 80, 0.8);
     /* Subtle ocean tone */
     color: white;
-    padding: 20px;
+    padding: 10px;
     border-radius: 10px;
     text-align: center;
     width: 80%;
-    margin: 20px auto;
-    margin-top: 200px;
+    margin: 10px auto;
+    margin-top: 160px;
+}
+
+.book-info-2 {
+    background: rgba(0, 40, 80, 0.8);
+    /* Subtle ocean tone */
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    width: 80%;
+    margin: 10px auto;
+    margin-top: 350px;
+}
+
+.book-info-1 {
+    background: rgba(0, 40, 80, 0.8);
+    /* Subtle ocean tone */
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    width: 80%;
+    margin: 10px auto;
+    margin-top: 300px;
 }
 
 .book-description {
@@ -640,7 +665,37 @@ h2 {
     margin: 20px auto;
     max-width: 600px;
     color: #FFD700;
+
+}.book-display {
+    text-align: center;
+    padding: 40px 20px;
 }
+
+.book-row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.book-tile img {
+    max-width: 200px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.book-tile img:hover {
+    transform: scale(1.05); 
+}
+.coming-soon {
+    color: #fefeff !important;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+
 
 @keyframes glowPulse {
     0% {
@@ -664,8 +719,8 @@ h2 {
 
 .author-bio {
     background-color: #033cf7;
-    padding: 20px;
-    margin-top: 40px;
+    padding: 10px;
+    margin-top: 20px;
     border-radius: 8px;
     text-align: center;
     font-size: 1em;
