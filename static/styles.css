@@ -771,3 +771,8 @@ main {
     animation: pulseSpeak 1s infinite;
     outline: 3px solid #00ccff;
 }
+
+.hungry {
+    font-size: 25px;
+    margin-top: 150px;
+}

@@ -20,12 +20,35 @@
     </nav>
 
     <!-- Main Content -->
-    <main>
+    <main id="main">
+        <!-- Voice Controls -->
         <button id="read-btn" class="speak-btn" onclick="narratePage()">🔊 Read This Page Aloud</button>
         <button id="stop-btn" class="speak-btn" onclick="stopNarration()">⏹️ Stop Narration</button>
-        <h1>Grumpy Shark's Menu</h1>
-        <p>🦈 Hungry for adventure? Grumpy Shark's menu is full of fun! Click the buttons above to explore the reef.</p>
 
+
+
+        <!-- Tagline -->
+        <p class="hungry">🦈 Hungry for adventure? Grumpy Shark's books are full of fun! Click the Books button to
+            explore the reef.</p>
+
+        <!-- Book Teaser -->
+        <section class="book-highlight">
+            <h2>Start Your Adventure</h2>
+            <div class="book-gallery">
+                <div class="book-tile">
+                    <img src="{{ url_for('static', filename='books/grumpy_1_cover.png') }}"
+                        alt="Grumpy Shark Book 1 Cover">
+                </div>
+                <div class="book-tile">
+                    <img src="{{ url_for('static', filename='books/grumpy_2_cover.png') }}"
+                        alt="Grumpy Shark Book 2 Cover">
+                </div>
+                <div class="book-tile">
+                    <img src="{{ url_for('static', filename='books/grumpy_3_cover.png') }}"
+                        alt="Grumpy Shark Book 3 Cover">
+                </div>
+            </div>
+        </section>
     </main>
 
     <!-- Scripts -->
