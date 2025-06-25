@@ -11,6 +11,8 @@
     <main class="inside-book-container">
         <h1>Inside the Adventure</h1>
 
+        <button id="read-btn" class="speak-btn" onclick="narratePage()">🔊 Read This Page Aloud</button>
+        <button id="stop-btn" class="speak-btn" onclick="stopNarration()">⏹️ Stop Narration</button>
         <div class="inside-book-gallery">
             <img src="{{ url_for('static', filename='books/sample_page1.png') }}" alt="Sample Page 1" />
             <img src="{{ url_for('static', filename='books/sample_page2.png') }}" alt="Sample Page 2" />
@@ -27,8 +29,7 @@
             <a href="/payment" class="link-box">💳 Proceed to Purchase</a>
         </div>
 
-        <button onclick="narratePage()">🔊 Read This Page Aloud</button>
-        <button onclick="stopNarration()">⏹️ Stop Narration</button>
+
     </main>
 
     <script src="{{ url_for('static', filename='script.js') }}"></script>

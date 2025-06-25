@@ -33,6 +33,9 @@
 </head>
 
 <body>
+    <button id="read-btn" class="speak-btn" onclick="narratePage()">🔊 Read This Page Aloud</button>
+    <button id="stop-btn" class="speak-btn" onclick="stopNarration()">⏹️ Stop Narration</button>
+
     <div class="payment-container">
         <h1>Grumpy Shark - Buy a Book!</h1>
         <p>Choose your adventure and purchase below:</p>
@@ -95,8 +98,7 @@
 
         <a href="{{ url_for('home') }}" class="home-btn">🏠 Back to Home</a>
 
-        <button onclick="narratePage()">🔊 Read This Page Aloud</button>
-        <button onclick="stopNarration()">⏹️ Stop Narration</button>
+
     </div>
 
     <p id="email-confirmation" class="hidden">✅ Your email request is being prepared...</p>

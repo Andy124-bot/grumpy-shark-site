@@ -20,6 +20,10 @@
     </header>
 
     <main>
+        <!-- 🔊 Narration Button -->
+        <button id="read-btn" class="speak-btn" onclick="narratePage()">🔊 Read This Page Aloud</button>
+        <button id="stop-btn" class="speak-btn" onclick="stopNarration()">⏹️ Stop Narration</button>
+
         <section class="book-display">
             <img src="{{ url_for('static', filename='books/grumpy_1.png') }}" alt="Book 1 Cover">
             <h2>GrumpyShark's Adventure</h2>
@@ -30,9 +34,7 @@
             <textarea placeholder="Type details about Book 1 here..."></textarea>
         </section>
 
-        <!-- 🔊 Narration Button -->
-        <button onclick="narratePage()">🔊 Read This Page Aloud</button>
-        <button onclick="stopNarration()">⏹️ Stop Narration</button>
+
     </main>
 
     <footer>

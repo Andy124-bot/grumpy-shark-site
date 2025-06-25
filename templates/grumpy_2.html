@@ -9,12 +9,15 @@
 
 <body>
     <main>
+        <button id="read-btn" class="speak-btn" onclick="narratePage()">🔊 Read This Page Aloud</button>
+        <button id="stop-btn" class="speak-btn" onclick="stopNarration()">⏹️ Stop Narration</button>
+
         <div class="navigation-links">
             <a href="/" class="link-box">🏠 Home</a>
             <a href="/books" class="link-box">📖 Back to Books</a>
         </div>
 
-        <h2>Grumpy Shark Adventures!</h2>
+        <h1>Grumpy Shark Adventures!</h1>
         <p class="book-description">The second adventure of Grumpy Shark! Dive into the deep sea...</p>
 
         <div class="character-list">
@@ -66,9 +69,8 @@
             <a href="/payment" class="buy-btn">Get the Book</a>
         </div>
 
-        <!-- 🎙️ Narration Button -->
-        <button onclick="narratePage()">🔊 Read This Page Aloud</button>
-        <button onclick="stopNarration()">⏹️ Stop Narration</button>
+
+
     </main>
 
     <script src="{{ url_for('static', filename='script.js') }}"></script>

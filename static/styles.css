@@ -45,6 +45,11 @@ nav {
     /* Slight transparency for an oceanic effect */
     padding: 10px 20px;
     z-index: 500;
+    pointer-events: none;
+}
+
+nav a {
+    pointer-events: auto;
 }
 
 @keyframes sway {
@@ -711,4 +716,58 @@ h2 {
 .image-wrapper .click-overlay {
     background: rgba(128, 128, 128, 0.7);
     /* more neutral tone */
+}
+
+button {
+    pointer-events: auto !important;
+    z-index: 9999 !important;
+    position: relative !important;
+}
+
+main {
+    z-index: 0 !important;
+    position: relative !important;
+}
+
+@keyframes pulseSpeak {
+    0% {
+        box-shadow: 0 0 10px rgba(0, 200, 255, 0.7);
+        transform: scale(1);
+    }
+
+    50% {
+        box-shadow: 0 0 20px rgba(0, 200, 255, 1);
+        transform: scale(1.05);
+    }
+
+    100% {
+        box-shadow: 0 0 10px rgba(0, 200, 255, 0.7);
+        transform: scale(1);
+    }
+}
+
+.speaking {
+    animation: pulseSpeak 1s infinite;
+    outline: 3px solid #00ccff;
+}
+
+.speak-btn {
+    background: #FFD700;
+    color: black;
+    padding: 12px 24px;
+    font-size: 18px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.speak-btn:hover {
+    background: #FFA500;
+    transform: scale(1.05);
+}
+
+.speaking {
+    animation: pulseSpeak 1s infinite;
+    outline: 3px solid #00ccff;
 }

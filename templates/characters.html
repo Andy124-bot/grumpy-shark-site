@@ -15,6 +15,9 @@
     <main>
         <p>Meet the cast of characters that make Grumpy Shark's adventures so exciting!</p>
 
+        <!-- 🔊 Narration Trigger -->
+        <button id="read-btn" class="speak-btn" onclick="narratePage()">🔊 Read This Page Aloud</button>
+        <button id="stop-btn" class="speak-btn" onclick="stopNarration()">⏹️ Stop Narration</button>
         <div class="character-list">
             <div class="character-card">
                 <img src="{{ url_for('static', filename='characters/grumpy.png') }}" alt="Grumpy Shark">
@@ -48,9 +51,7 @@
             </div>
         </div>
 
-        <!-- 🔊 Narration Trigger -->
-        <button onclick="narratePage()">🔊 Read This Page Aloud</button>
-        <button onclick="stopNarration()">⏹️ Stop Narration</button>
+
     </main>
 
     <script src="{{ url_for('static', filename='script.js') }}"></script>

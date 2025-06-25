@@ -1,29 +1,42 @@
-// 🎙️ Narration functions — must be global so HTML buttons can access them
+// 🎙️ Narration functions — available globally
 function speakText(text) {
     const utterance = new SpeechSynthesisUtterance(text);
     utterance.lang = 'en-AU';
     speechSynthesis.speak(utterance);
 }
 
-window.narratePage = function () {
+function narratePage() {
     const main = document.querySelector('main');
+    const readBtn = document.getElementById("read-btn");
     if (main) {
         speakText(main.innerText);
+        if (readBtn) readBtn.classList.add("speaking");
     }
-};
+}
 
-window.stopNarration = function () {
+function stopNarration() {
+    const readBtn = document.getElementById("read-btn");
     speechSynthesis.cancel();
-};
+    if (readBtn) readBtn.classList.remove("speaking");
+}
+
+// ✅ Bind narration buttons immediately (since script is at end of <body>)
+const readBtn = document.getElementById("read-btn");
+const stopBtn = document.getElementById("stop-btn");
+
+if (readBtn) {
+    readBtn.addEventListener("click", narratePage);
+    console.log("✅ Read button is ready!");
+}
+
+if (stopBtn) {
+    stopBtn.addEventListener("click", stopNarration);
+    console.log("✅ Stop button is ready!");
+}
 
 // 📦 DOM-related scripts
 document.addEventListener("DOMContentLoaded", function () {
     console.log("JavaScript loaded!");
-    const readBtn = document.getElementById("read-btn");
-    const stopBtn = document.getElementById("stop-btn");
-
-    if (readBtn) readBtn.addEventListener("click", narratePage);
-    if (stopBtn) stopBtn.addEventListener("click", stopNarration);
 
     // 📩 Auto-fill Contact Form
     const urlParams = new URLSearchParams(window.location.search);
@@ -119,7 +132,6 @@ document.addEventListener("DOMContentLoaded", function () {
             }, 100);
         });
     }
-
 
     animateFloatingElements();
 });

@@ -9,6 +9,9 @@
 
 <body>
     <main>
+        <button id="read-btn" class="speak-btn" onclick="narratePage()">🔊 Read This Page Aloud</button>
+        <button id="stop-btn" class="speak-btn" onclick="stopNarration()">⏹️ Stop Narration</button>
+
         <header>
             <h1 class="book_page_text">Grumpy Sharks Book Collection</h1>
         </header>
@@ -52,9 +55,7 @@
             </p>
         </div>
 
-        <!-- 🔊 Voice Narration Button -->
-        <button onclick="narratePage()">🔊 Read This Page Aloud</button>
-        <button onclick="stopNarration()">⏹️ Stop Narration</button>
+
 
         <div class="navigation-links">
             <a href="{{ url_for('home') }}" class="link-box">🏠 Back to Home</a>

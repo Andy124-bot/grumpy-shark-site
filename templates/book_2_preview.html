@@ -11,6 +11,8 @@
     <main class="sample-preview">
         <h1>Grumpy Shark's Ocean Quest - Preview</h1>
 
+        <button id="read-btn" class="speak-btn" onclick="narratePage()">🔊 Read This Page Aloud</button>
+        <button id="stop-btn" class="speak-btn" onclick="stopNarration()">⏹️ Stop Narration</button>
         <div class="sample-pages">
             <img src="{{ url_for('static', filename='books/sample_page_4.jpg') }}" alt="Sample Page 4">
             <img src="{{ url_for('static', filename='books/sample_page_5.jpg') }}" alt="Sample Page 5">
@@ -25,9 +27,8 @@
             </p>
         </div>
 
-        <!-- 🔊 Voice Button -->
-        <button onclick="narratePage()">🔊 Read This Page Aloud</button>
-        <button onclick="stopNarration()">⏹️ Stop Narration</button>
+
+
 
         <a href="{{ url_for('books') }}" class="link-box">← Back to Book Gallery</a>
     </main>

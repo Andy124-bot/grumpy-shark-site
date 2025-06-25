@@ -9,6 +9,10 @@
 
 <body>
     <main>
+
+        <button id="read-btn" class="speak-btn" onclick="narratePage()">🔊 Read This Page Aloud</button>
+        <button id="stop-btn" class="speak-btn" onclick="stopNarration()">⏹️ Stop Narration</button>
+
         <div class="book-gallery">
             <a href="{{ url_for('bio_book1') }}" class="book-tile" id="book1">
                 <img src="{{ url_for('static', filename='books/grumpy_1_cover.png') }}"
@@ -29,8 +33,7 @@
             </a>
         </div>
 
-        <button onclick="narratePage()">🔊 Read This Page Aloud</button>
-        <button onclick="stopNarration()">⏹️ Stop Narration</button>
+
 
         <div class="navigation-links">
             <a href="/payment" class="link-box">💳 Go to Purchase</a>
