@@ -460,6 +460,7 @@ h2 {
     color: #FFD700;
     font-weight: bold;
 }
+
 .inside-book-container {
     text-align: center;
     padding: 40px;
@@ -509,6 +510,7 @@ h2 {
     line-height: 1.6;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
+
 @media (max-width: 600px) {
 
     .book-row,
@@ -865,6 +867,7 @@ main {
     font-size: 25px;
     margin-top: 150px;
 }
+
 footer {
     background-color: #002f4b;
     /* Deep blue tone */
@@ -873,7 +876,7 @@ footer {
     padding: 20px 10px;
     font-family: 'Segoe UI', sans-serif;
     font-size: 0.95rem;
-    margin-top: 50px;
+    margin-top: 150px;
     position: relative;
     bottom: 0;
     width: 100%;
@@ -891,4 +894,5 @@ footer a:hover {
 }
 
 footer nav {
-    margin-top: 10px; }
+    margin-top: 10px;
+}
