@@ -2483,3 +2483,4 @@
 2025-06-27 08:24:13,943 INFO 127.0.0.1 - - [27/Jun/2025 08:24:13] "GET /static/script.js HTTP/1.1" 200 -
 2025-06-27 08:24:13,944 INFO 127.0.0.1 - - [27/Jun/2025 08:24:13] "[36mGET /static/books/grumpy_3_cover.png HTTP/1.1[0m" 304 -
 2025-06-27 08:24:13,944 INFO 127.0.0.1 - - [27/Jun/2025 08:24:13] "[36mGET /static/books/grumpy_2_cover.png HTTP/1.1[0m" 304 -
+2025-06-27 08:24:14,176 INFO 127.0.0.1 - - [27/Jun/2025 08:24:14] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
