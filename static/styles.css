@@ -865,3 +865,30 @@ main {
     font-size: 25px;
     margin-top: 150px;
 }
+footer {
+    background-color: #002f4b;
+    /* Deep blue tone */
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 10px;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 0.95rem;
+    margin-top: 50px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer a {
+    color: #00aced;
+    /* Accent color for links */
+    text-decoration: none;
+    margin: 0 8px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer nav {
+    margin-top: 10px; }
