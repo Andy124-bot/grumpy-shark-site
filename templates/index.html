@@ -51,10 +51,29 @@
                 </div>
             </div>
         </section>
+
+        <section id="snap-game" class="section">
+            <h2>🎮 Snap! with Grumpy & Friends</h2>
+            <p>Tap ‘Snap!’ when two matching cards appear. Fast reflexes win the pile!</p>
+
+            <div class="game-area">
+                <div class="player-card card-back"></div>
+                <div class="cpu-card card-back"></div>
+            </div>
+
+            <div class="game-controls">
+                <button onclick="startGame()">Start Game</button>
+                <button onclick="playerSnap()">Snap!</button>
+            </div>
+
+            <div class="game-status">
+                <p id="game-message"></p>
+            </div>
+        </section>
     </main>
     <footer>
         <p>&copy; 2025 Grumpy Shark Productions. All rights reserved.</p>
-      </footer>
+    </footer>
     <!-- Scripts -->
     <script src="{{ url_for('static', filename='script.js') }}?v=2"></script>
 </body>

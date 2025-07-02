@@ -154,3 +154,108 @@ document.addEventListener("DOMContentLoaded", function () {
 
     animateFloatingElements();
 });
+
+// === Snap Card Game ===
+
+const characters = [
+    'jasmine.png',
+    'dad_gill.png',
+    'maz.png',
+    'grumpy.png',
+    'bon-bon.png',
+    'craig.png',
+    'destiny.png',
+    'maz-hiding.png',
+    'irene_lightfish.png',
+    'jack_gill.png',
+    'jada.png',
+    'jessica.png',
+    'kristine.png',
+    'lacy.png',
+    'lisa.png',
+    'matilda.png',
+    'mckenna.png',
+    'mum_gill.png',
+    'ollie.png',
+    'orion.png',
+    'pauline.png',
+    'polly.png',
+    'puffy.png',
+    'ronnie.png',
+    'rylee.png',
+];
+
+let deck = [];
+let playerPile = [];
+let cpuPile = [];
+let currentCards = [];
+let turnInterval;
+let isMatch = false;
+
+function startGame() {
+    // Create duplicated deck
+    deck = [...characters, ...characters];
+    deck = shuffle(deck);
+
+    playerPile = [];
+    cpuPile = [];
+    currentCards = [];
+    isMatch = false;
+
+    document.getElementById("game-message").textContent = "Game started!";
+
+    playTurn();
+    turnInterval = setInterval(playTurn, 1500);
+}
+
+function shuffle(arr) {
+    // Fisher-Yates Shuffle
+    for (let i = arr.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [arr[i], arr[j]] = [arr[j], arr[i]];
+    }
+    return arr;
+}
+
+function playTurn() {
+    if (deck.length === 0) {
+        clearInterval(turnInterval);
+        document.getElementById("game-message").textContent =
+            playerPile.length > cpuPile.length ? "🎉 You win!" : "🤖 CPU wins!";
+        return;
+    }
+
+    const playerCard = deck.pop();
+    const cpuCard = deck.pop();
+
+    currentCards = [playerCard, cpuCard];
+
+    document.querySelector(".player-card").style.backgroundImage = `url('characters/${playerCard}')`;
+    document.querySelector(".cpu-card").style.backgroundImage = `url('characters/${cpuCard}')`;
+
+    if (playerCard === cpuCard) {
+        isMatch = true;
+        document.getElementById("game-message").textContent = "💥 Match! Tap SNAP!";
+        // If user doesn't snap within 1s, CPU takes it
+        setTimeout(() => {
+            if (isMatch) {
+                cpuPile.push(playerCard, cpuCard);
+                document.getElementById("game-message").textContent = "⏱ Too slow! CPU got it.";
+                isMatch = false;
+            }
+        }, 1200);
+    } else {
+        isMatch = false;
+        document.getElementById("game-message").textContent = "🤔 Waiting...";
+    }
+}
+
+function playerSnap() {
+    if (isMatch) {
+        playerPile.push(...currentCards);
+        document.getElementById("game-message").textContent = "👏 Nice snap!";
+        isMatch = false;
+    } else {
+        document.getElementById("game-message").textContent = "😬 No match to snap!";
+    }
+}
