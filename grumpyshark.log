@@ -3203,3 +3203,4 @@
 2025-07-08 07:43:40,915 INFO 127.0.0.1 - - [08/Jul/2025 07:43:40] "[36mGET /static/characters/maz.png HTTP/1.1[0m" 304 -
 2025-07-08 07:43:40,922 INFO 127.0.0.1 - - [08/Jul/2025 07:43:40] "[36mGET /static/characters/puffy.png HTTP/1.1[0m" 304 -
 2025-07-08 07:43:40,961 INFO 127.0.0.1 - - [08/Jul/2025 07:43:40] "[36mGET /static/characters/destiny.png HTTP/1.1[0m" 304 -
+2025-07-08 07:43:40,962 INFO 127.0.0.1 - - [08/Jul/2025 07:43:40] "[36mGET /static/backgrounds/home_page_bg.png HTTP/1.1[0m" 304 -
