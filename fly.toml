@@ -3,7 +3,7 @@
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
-app = 'grumpysharkwebsite-frosty-star-3527'
+app = 'grumpysharkwebsite'
 primary_region = 'syd'
 
 [build]
