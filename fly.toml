@@ -1,9 +1,9 @@
-# fly.toml app configuration file generated for grumpysharkwebsite on 2025-07-07T08:27:23+10:00
+# fly.toml app configuration file generated for grumpysharkwebsite-frosty-star-3527 on 2025-07-08T07:52:56+10:00
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
-app = 'grumpysharkwebsite'
+app = 'grumpysharkwebsite-frosty-star-3527'
 primary_region = 'syd'
 
 [build]
