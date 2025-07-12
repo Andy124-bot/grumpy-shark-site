@@ -1,7 +1,10 @@
 """Flask application for Grumpy Shark website."""
-
+import smtplib
+from email.message import EmailMessage
 import logging
 from flask import Flask, render_template, request, redirect, url_for
+
+
 
 
 # Configure logging
@@ -51,8 +54,7 @@ def submit_contact():
     app.logger.info("New Contact Message: %s (%s) - %s", name, email, message)
     return redirect(url_for("contact"))
 
-import smtplib
-from email.message import EmailMessage
+
 
 @app.route("/submit_poll", methods=["POST"])
 def submit_poll():
@@ -74,7 +76,7 @@ def submit_poll():
             with smtplib.SMTP_SSL('smtp.gmail.com', 465) as smtp:
                 smtp.login('your_email@example.com', 'fuzsfzolzlcpqiiq')  # Use App Password
                 smtp.send_message(msg)
-        except Exception as e:
+        except smtplib.SMTPException as e:
             app.logger.error("Email send failed: %s", e)
 
     return redirect(url_for("books"))
