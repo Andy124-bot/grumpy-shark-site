@@ -49,18 +49,6 @@
             </div>
         </section>
 
-        <form action="/submit_poll" method="POST" class="poll-box">
-            <h3>📊 Help Us Choose a Title!</h3>
-
-            <label><input type="radio" name="sharkTitle" value="Grumpy Shark" required> Keep Title as Grumpy
-                Shark</label><br>
-            <label><input type="radio" name="sharkTitle" value="Happy Shark"> Change Title to Happy Shark</label><br>
-            <label><input type="radio" name="sharkTitle" value="Sharkey and Friends"> Change Title to Sharkey and
-                Friends</label><br>
-
-            <button type="submit">Cast Your Vote</button>
-        </form>
-
     </main>
 
     <audio id="bg-music" src="{{ url_for('static', filename='audio/grumpy_song.wav') }}" autoplay loop></audio>

@@ -1,10 +1,7 @@
 """Flask application for Grumpy Shark website."""
-import smtplib
-from email.message import EmailMessage
+
 import logging
 from flask import Flask, render_template, request, redirect, url_for
-
-
 
 
 # Configure logging
@@ -54,33 +51,6 @@ def submit_contact():
     app.logger.info("New Contact Message: %s (%s) - %s", name, email, message)
     return redirect(url_for("contact"))
 
-
-
-@app.route("/submit_poll", methods=["POST"])
-def submit_poll():
-    """Handle poll form submission, log the vote, and send email."""
-    selected_title = request.form.get("sharkTitle")
-
-    if selected_title:
-        app.logger.info("Poll Vote Received: %s", selected_title)
-
-        # Prepare email
-        msg = EmailMessage()
-        msg.set_content(f"A vote was cast for: {selected_title}")
-        msg['Subject'] = 'New Grumpy Shark Poll Vote'
-        msg['From'] = 'your_email@example.com'       # Replace with your Gmail
-        msg['To'] = 'grumpysharkwebsite@gmail.com'
-
-        # Send the email
-        try:
-            with smtplib.SMTP_SSL('smtp.gmail.com', 465) as smtp:
-                smtp.login('your_email@example.com', 'fuzsfzolzlcpqiiq')  # Use App Password
-                smtp.send_message(msg)
-        except smtplib.SMTPException as e:
-            app.logger.error("Email send failed: %s", e)
-
-    return redirect(url_for("books"))
-
 @app.route("/payment")
 def payment():
     """Render the payment page."""
@@ -114,8 +84,6 @@ def book_3_preview():
 def favicon():
     """Serve the favicon for the site."""
     return redirect(url_for('static', filename='favicon.ico'))
-
-
 
 
 
