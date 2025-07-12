@@ -129,25 +129,32 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-    // 🐠 Floating sway animation
-    const floatingElements = document.querySelectorAll(".oceanic-transition");
+    function stopMusicOnly() {
+        const bgMusic = document.getElementById('bg-music');
+        const toggleBtn = document.getElementById('toggle-music');
 
-    function animateFloatingElements() {
-        floatingElements.forEach((element) => {
-            let position = 0;
-            let direction = 1;
-
-            setInterval(() => {
-                position += direction * 0.5;
-                element.style.transform = `translateY(${position}px)`;
-
-                if (position > 5 || position < -5) {
-                    direction *= -1;
-                }
-            }, 100);
-        });
+        if (bgMusic && !bgMusic.paused) {
+            bgMusic.pause();
+            if (toggleBtn) toggleBtn.textContent = '🔇 Music On';
+            console.log("🎵 Background music stopped");
+        } else {
+            console.log("🎵 Music already paused");
+        }
     }
+    window.stopMusicOnly = stopMusicOnly;
+    function startMusic() {
+        const bgMusic = document.getElementById('bg-music');
+        const toggleBtn = document.getElementById('toggle-music');
 
-    animateFloatingElements();
+        if (bgMusic && bgMusic.paused) {
+            bgMusic.play().catch(err => console.warn("🎵 Music play failed:", err));
+            if (toggleBtn) toggleBtn.textContent = '🔊 Music Off';
+            console.log("🎵 Background music started");
+        } else {
+            console.log("🎵 Music already playing");
+        }
+    }
+    window.startMusic = startMusic;
+
 });
 

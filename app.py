@@ -21,6 +21,11 @@ def home():
     """Render the home page."""
     return render_template("index.html")
 
+@app.route("/about")
+def about():
+    """Render the about page."""
+    return render_template("about.html")
+
 @app.route("/books")
 def books():
     """Render the books listing page."""

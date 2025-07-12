@@ -5,9 +5,15 @@
     <meta charset="UTF-8" />
     <title>Contact Grumpy Shark</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}?v=4" type="image/x-icon">
 </head>
 
 <body>
+    <nav class="grumpy-navbar">
+        <a href="/books" class="link-box">Books</a>
+        <a href="/about" class="link-box">About</a>
+        <a href="/contact" class="link-box">Contact</a>
+    </nav>
     <main>
         <header>
             <h1>Get in Touch with Grumpy Shark</h1>
@@ -86,10 +92,7 @@
 </body>
 <footer>
     <p>&copy; 2025 Grumpy Shark Productions. All rights reserved.</p>
-    <nav>
-        <a href="index.html">Home</a> |
-        <a href="menu.html">Menu</a> |
-        <a href="contact.html">Contact</a>
-    </nav>
+
 </footer>
+
 </html>

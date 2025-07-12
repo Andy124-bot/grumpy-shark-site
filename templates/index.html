@@ -11,10 +11,10 @@
 
 <body>
     <!-- Improved Navigation -->
-    <nav>
-        <div class="links-container">
-            <a href="/books" class="link-box">Books</a>
-        </div>
+    <nav class="grumpy-navbar">
+        <a href="/books" class="link-box">Books</a>
+        <a href="/about" class="link-box">About</a>
+        <a href="/contact" class="link-box">Contact</a>
     </nav>
 
     <!-- Main Content -->
@@ -50,6 +50,11 @@
         </section>
 
     </main>
+
+    <audio id="bg-music" src="audio/grumpy_song.wav" autoplay loop></audio>
+    <button onclick="stopMusicOnly()">🛑 Stop Music</button>
+    <button onclick="startMusic()">▶️ Play Music</button>
+
     <footer>
         <p>&copy; 2025 Grumpy Shark Productions. All rights reserved.</p>
     </footer>

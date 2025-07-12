@@ -37,39 +37,19 @@ header {
     display: none !important;
 }
 
-nav {
-    position: fixed;
-    top: 0;
+.grumpy-navbar {
     width: 100%;
-    background: rgba(238, 243, 224, 0);
-    /* Slight transparency for an oceanic effect */
-    padding: 10px 20px;
-    z-index: 500;
-    pointer-events: none;
+    /* Stretch across entire viewport */
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    background-color: #62ecac;
+    padding: 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 0;
+    /* Remove border radius if you want flat edges */
 }
 
-nav a {
-    pointer-events: auto;
-}
-
-@keyframes sway {
-    0% {
-        transform: rotate(0deg) translateY(0);
-    }
-
-    50% {
-        transform: rotate(2deg) translateY(-5px);
-    }
-
-    100% {
-        transform: rotate(0deg) translateY(0);
-    }
-}
-
-.swaying-text {
-    display: inline-block;
-    animation: sway 3s infinite ease-in-out;
-}
 
 .contact-container {
     display: flex;
