@@ -43,7 +43,7 @@ header {
     display: flex;
     justify-content: center;
     gap: 2rem;
-    background-color: #62ecac;
+    background-color: #103c9d00;
     padding: 1rem;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     border-radius: 0;
@@ -557,7 +557,7 @@ h2 {
 }
 
 .buy-btn,
-.contact-btn {
+.contact-button {
     display: inline-block;
     background: #ffcc00;
     padding: 15px 30px;
@@ -568,9 +568,12 @@ h2 {
     transition: 0.3s;
 }
 
-.contact-btn {
-    background: #0077cc;
-    color: white;
+.contact-button {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    /* center horizontally */
+    transform: translateX(-50%);
 }
 
 .buy-btn:hover {
@@ -856,7 +859,7 @@ footer {
     padding: 20px 10px;
     font-family: 'Segoe UI', sans-serif;
     font-size: 0.95rem;
-    margin-top: 150px;
+    margin-top: 312px;
     position: relative;
     bottom: 0;
     width: 100%;

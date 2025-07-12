@@ -13,7 +13,7 @@
     <!-- Improved Navigation -->
     <nav class="grumpy-navbar">
         <a href="/books" class="link-box">Books</a>
-        <a href="/about" class="link-box">About</a>
+        <a href="/payment" class="link-box">About</a>
         <a href="/contact" class="link-box">Contact</a>
     </nav>
 
@@ -49,9 +49,21 @@
             </div>
         </section>
 
+        <form action="/submit_poll" method="POST" class="poll-box">
+            <h3>📊 Help Us Choose a Title!</h3>
+
+            <label><input type="radio" name="sharkTitle" value="Grumpy Shark" required> Keep Title as Grumpy
+                Shark</label><br>
+            <label><input type="radio" name="sharkTitle" value="Happy Shark"> Change Title to Happy Shark</label><br>
+            <label><input type="radio" name="sharkTitle" value="Sharkey and Friends"> Change Title to Sharkey and
+                Friends</label><br>
+
+            <button type="submit">Cast Your Vote</button>
+        </form>
+
     </main>
 
-    <audio id="bg-music" src="audio/grumpy_song.wav" autoplay loop></audio>
+    <audio id="bg-music" src="{{ url_for('static', filename='audio/grumpy_song.wav') }}" autoplay loop></audio>
     <button onclick="stopMusicOnly()">🛑 Stop Music</button>
     <button onclick="startMusic()">▶️ Play Music</button>
 

@@ -10,10 +10,16 @@
 
 <body>
     <nav class="grumpy-navbar">
+        <a href="/" class="link-box">Home</a>
         <a href="/books" class="link-box">Books</a>
-        <a href="/about" class="link-box">About</a>
+        <a href="/payment" class="link-box">About</a>
         <a href="/contact" class="link-box">Contact</a>
     </nav>
+
+    <!-- 🔊 Narration Button -->
+    <button id="read-btn" class="speak-btn" onclick="narratePage()">🔊 Read This Page Aloud</button>
+    <button id="stop-btn" class="speak-btn" onclick="stopNarration()">⏹️ Stop Narration</button>
+
     <main>
         <header>
             <h1>Get in Touch with Grumpy Shark</h1>
@@ -43,9 +49,7 @@
             </form>
         </div>
 
-        <!-- 🔊 Narration Button -->
-        <button id="read-btn" class="speak-btn" onclick="narratePage()">🔊 Read This Page Aloud</button>
-        <button id="stop-btn" class="speak-btn" onclick="stopNarration()">⏹️ Stop Narration</button>
+
     </main>
 
     <script>
