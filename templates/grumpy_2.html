@@ -42,10 +42,13 @@
             </div>
 
             <div class="character-card">
-                <img src="{{ url_for('static', filename='characters/jessica_gill.png') }}" alt=Jessica Gill, a cheerful young fish with a playful smile, swimming in a colorful underwater scene with coral and bubbles, conveying a sense of fun and curiosity>
+                <img src="{{ url_for('static', filename='characters/jessica_gill.png') }}" alt=Jessica Gill, a cheerful
+                    young fish with a playful smile, swimming in a colorful underwater scene with coral and bubbles,
+                    conveying a sense of fun and curiosity>
                 <p>Jessica Gill</p>
                 <div class="character-bio">Smart and caring with a splash of mischief.</div>
             </div>
+
 
             <div class="character-card">
                 <img src="{{ url_for('static', filename='characters/mum_gill.png') }}" alt="Mum Gill">
@@ -53,33 +56,69 @@
                 <div class="character-bio">Loving, wise, and always prepared with snacks.</div>
             </div>
 
-            {% for character in ["craig", "destiny", "kristine", "maz", "maz_hiding", "rylee", "mckenna", "puffy"] %}
             <div class="character-card">
-                <img src="{{ url_for('static', filename='characters/' + character + '.png') }}"
-                    alt="{{ character.capitalize() }}">
-                <p>{{ character.capitalize() }}</p>
-                <div class="character-bio">Short bio for {{ character.capitalize() }}.</div>
+                <img src="{{ url_for('static', filename='characters/craig.png') }}" alt="Craig Clownfish">
+                <p>Craig</p>
+                <div class="character-bio">Helpfull , caring Bus Driver.</div>
             </div>
-            {% endfor %}
-        </div>
 
-        <div class="book-info-2">
-            <h2>Book 2: Grumpy Shark's Next Challenge</h2>
-            <p>Grumpy Shark faces unexpected twists and new allies in his latest adventure.</p>
-            <a href="/payment" class="buy-btn">Get the Book</a>
-        </div>
+            <div class="character-card">
+                <img src="{{ url_for('static', filename='characters/destiny.png') }}" alt="Destiny">
+                <p>Destiny</p>
+                <div class="character-bio">Loving Purple Octopus with 8 arms to Hug you With.</div>
+            </div>
+
+            <div class="character-card">
+                <img src="{{ url_for('static', filename='characters/kristine.png') }}" alt="Kristine">
+                <p>Kristine</p>
+                <div class="character-bio">....</div>
+            </div>
+
+            <div class="character-card">
+                <img src="{{ url_for('static', filename='characters/maz.png') }}" alt="Maz Jellyfish">
+                <p>Maz</p>
+                <div class="character-bio">....</div>
+            </div>
+
+            <div class="character-card">
+                <img src="{{ url_for('static', filename='characters/maz_hiding.png') }}" alt="Hiding Maz">
+                <p>Maz Hiding</p>
+                <div class="character-bio">Love to trick her friends by turning invisiable and Hiding.</div>
+            </div>
+
+
+            <div class="character-card">
+                <img src="{{ url_for('static', filename='characters/rylee.png') }}" alt="Rylee">
+                <p>Rylee</p>
+                <div class="character-bio">......</div>
+            </div>
+
+
+            <div class="character-card">
+                <img src="{{ url_for('static', filename='characters/mckenna.png') }}" alt="McKenna">
+                <p>Mckenna</p>
+                <div class="character-bio">.....</div>
+            </div>
+
+            <div class="character-card">
+                <img src="{{ url_for('static', filename='characters/puffy.png') }}" alt="Puffy">
+                <p>Puffy</p>
+                <div class="character-bio">Loves to play with her friends , providing so much joy.</div>
+            </div>
+
+            <div class="book-info-2">
+                <h2>Book 2: Grumpy Shark's Next Challenge</h2>
+                <p>Grumpy Shark faces unexpected twists and new allies in his latest adventure.</p>
+                <a href="/payment" class="buy-btn">Get the Book</a>
+            </div>
 
 
 
     </main>
+
     <footer>
         <p>&copy; 2025 Grumpy Shark Productions. All rights reserved.</p>
-        <nav>
-            <a href="index.html">Home</a> |
-            <a href="menu.html">Menu</a> |
-            <a href="contact.html">Contact</a>
-        </nav>
-        </footer>
+    </footer>
 
     <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>

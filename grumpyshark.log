@@ -5119,3 +5119,41 @@
 2025-07-13 09:35:26,062 INFO 127.0.0.1 - - [13/Jul/2025 09:35:26] "[36mGET /static/script.js?v=2 HTTP/1.1[0m" 304 -
 2025-07-13 09:35:26,067 INFO 127.0.0.1 - - [13/Jul/2025 09:35:26] "[35m[1mGET /static/audio/grumpy_song.wav HTTP/1.1[0m" 206 -
 2025-07-13 09:35:26,073 INFO 127.0.0.1 - - [13/Jul/2025 09:35:26] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-13 09:35:26,074 INFO 127.0.0.1 - - [13/Jul/2025 09:35:26] "[36mGET /static/books/grumpy_3_cover.png HTTP/1.1[0m" 304 -
+2025-07-13 09:35:26,085 INFO 127.0.0.1 - - [13/Jul/2025 09:35:26] "[36mGET /static/backgrounds/home_page_bg.png HTTP/1.1[0m" 304 -
+2025-07-13 09:35:28,799 INFO 127.0.0.1 - - [13/Jul/2025 09:35:28] "[33mPOST /submit_poll HTTP/1.1[0m" 404 -
+2025-07-13 09:35:28,944 INFO 127.0.0.1 - - [13/Jul/2025 09:35:28] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-07-13 09:36:30,388 INFO 127.0.0.1 - - [13/Jul/2025 09:36:30] "[33mPOST /submit_poll HTTP/1.1[0m" 404 -
+2025-07-13 09:36:38,365 INFO 127.0.0.1 - - [13/Jul/2025 09:36:38] "GET / HTTP/1.1" 200 -
+2025-07-13 09:36:38,482 INFO 127.0.0.1 - - [13/Jul/2025 09:36:38] "GET /static/styles.css HTTP/1.1" 200 -
+2025-07-13 09:36:38,497 INFO 127.0.0.1 - - [13/Jul/2025 09:36:38] "[36mGET /static/books/grumpy_2_cover.png HTTP/1.1[0m" 304 -
+2025-07-13 09:36:38,499 INFO 127.0.0.1 - - [13/Jul/2025 09:36:38] "[36mGET /static/script.js?v=2 HTTP/1.1[0m" 304 -
+2025-07-13 09:36:38,499 INFO 127.0.0.1 - - [13/Jul/2025 09:36:38] "[36mGET /static/books/grumpy_1_cover.png HTTP/1.1[0m" 304 -
+2025-07-13 09:36:38,512 INFO 127.0.0.1 - - [13/Jul/2025 09:36:38] "[36mGET /static/books/grumpy_3_cover.png HTTP/1.1[0m" 304 -
+2025-07-13 09:36:38,513 INFO 127.0.0.1 - - [13/Jul/2025 09:36:38] "[35m[1mGET /static/audio/grumpy_song.wav HTTP/1.1[0m" 206 -
+2025-07-13 09:36:38,522 INFO 127.0.0.1 - - [13/Jul/2025 09:36:38] "[36mGET /static/backgrounds/home_page_bg.png HTTP/1.1[0m" 304 -
+2025-07-13 09:36:38,524 INFO 127.0.0.1 - - [13/Jul/2025 09:36:38] "[35m[1mGET /static/audio/grumpy_song.wav HTTP/1.1[0m" 206 -
+2025-07-13 09:36:42,902 INFO 127.0.0.1 - - [13/Jul/2025 09:36:42] "GET /contact HTTP/1.1" 200 -
+2025-07-13 09:36:42,967 INFO 127.0.0.1 - - [13/Jul/2025 09:36:42] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-13 09:36:42,971 INFO 127.0.0.1 - - [13/Jul/2025 09:36:42] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-07-13 09:36:43,007 INFO 127.0.0.1 - - [13/Jul/2025 09:36:43] "[36mGET /static/backgrounds/home_page_bg.png HTTP/1.1[0m" 304 -
+2025-07-15 06:25:12,600 INFO Grumpy Shark website has started.
+2025-07-15 06:25:12,661 INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-07-15 06:25:12,661 INFO [33mPress CTRL+C to quit[0m
+2025-07-15 06:25:12,662 INFO  * Restarting with stat
+2025-07-15 06:25:12,881 INFO Grumpy Shark website has started.
+2025-07-15 06:25:12,901 WARNING  * Debugger is active!
+2025-07-15 06:25:12,904 INFO  * Debugger PIN: 101-348-966
+2025-07-15 06:25:16,357 INFO 127.0.0.1 - - [15/Jul/2025 06:25:16] "GET / HTTP/1.1" 200 -
+2025-07-15 06:25:16,522 INFO 127.0.0.1 - - [15/Jul/2025 06:25:16] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-07-15 06:25:16,902 INFO 127.0.0.1 - - [15/Jul/2025 06:25:16] "GET /static/script.js?v=2 HTTP/1.1" 200 -
+2025-07-15 06:25:16,909 INFO 127.0.0.1 - - [15/Jul/2025 06:25:16] "GET /static/styles.css HTTP/1.1" 200 -
+2025-07-15 06:25:16,923 INFO 127.0.0.1 - - [15/Jul/2025 06:25:16] "GET /static/backgrounds/home_page_bg.png HTTP/1.1" 200 -
+2025-07-15 06:25:16,926 INFO 127.0.0.1 - - [15/Jul/2025 06:25:16] "GET /static/books/grumpy_3_cover.png HTTP/1.1" 200 -
+2025-07-15 06:25:16,939 INFO 127.0.0.1 - - [15/Jul/2025 06:25:16] "GET /static/books/grumpy_2_cover.png HTTP/1.1" 200 -
+2025-07-15 06:25:16,943 INFO 127.0.0.1 - - [15/Jul/2025 06:25:16] "[35m[1mGET /static/audio/grumpy_song.wav HTTP/1.1[0m" 206 -
+2025-07-15 06:25:16,943 INFO 127.0.0.1 - - [15/Jul/2025 06:25:16] "GET /static/books/grumpy_1_cover.png HTTP/1.1" 200 -
+2025-07-15 06:25:26,203 INFO 127.0.0.1 - - [15/Jul/2025 06:25:26] "GET /books HTTP/1.1" 200 -
+2025-07-15 06:25:26,262 INFO 127.0.0.1 - - [15/Jul/2025 06:25:26] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-15 06:25:26,268 INFO 127.0.0.1 - - [15/Jul/2025 06:25:26] "[36mGET /static/books/grumpy_1_cover.png HTTP/1.1[0m" 304 -
